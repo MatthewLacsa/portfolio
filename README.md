@@ -1,2 +1,2 @@
 # portfolio
-My portfolio website 
+This website showcases my life, achievements, goals :)
