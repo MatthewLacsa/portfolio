@@ -10,11 +10,11 @@ export default function Home() {
 
       </div>
       
-      <div className="text-7xl">
+      <div className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl ">
         <p>Matthew Lacsa</p>
       </div>
 
-      <div className="">
+      <div className="text-xs sm:text-sm md:text-base lg:text-lg">
          <TypeAnimation
             sequence={[
             'CS @ Dalhousie University',
