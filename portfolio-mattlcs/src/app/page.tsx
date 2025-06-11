@@ -4,9 +4,16 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
-      <div className="flex gap-4">
-        <a href="/aboutme">About Me</a>
-        <a href="/projects">Projects</a>
+      <div className="flex">
+        <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300
+                           dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <a href="/aboutme">About Me</a>
+        </button>
+        <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 
+                            font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <a href="/projects">Projects</a>
+        </button>
+
       </div>
       
       <div className="text-7xl">
