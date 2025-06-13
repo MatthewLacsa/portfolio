@@ -1,6 +1,6 @@
 "use client"
 import { TypeAnimation } from 'react-type-animation';
-
+import * as motion from "motion/react-client"
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
@@ -10,9 +10,18 @@ export default function Home() {
 
       </div>
       
-      <div className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl ">
-        <p>Matthew Lacsa</p>
-      </div>
+       <motion.h1
+      className="text-[4rem] font-bold text-blue-300 text-center"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 2,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
+     Matthew Lacsa
+    </motion.h1>
 
       <div className="text-xs sm:text-sm md:text-base lg:text-lg">
          <TypeAnimation
@@ -27,7 +36,7 @@ export default function Home() {
             1000,
             ]}
             wrapper="span"
-            speed={50}
+            speed={10}
             style={{ fontSize: '2em', display: 'inline-block' }}
             repeat={Infinity}
           />
