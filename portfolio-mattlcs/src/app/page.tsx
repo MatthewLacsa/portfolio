@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
-      <div className="flex gap-2">
+      <div className="flex gap-2 text-2xl">
                 <a href="/aboutme">About Me</a>
                 <a href="/projects">Projects</a>
 
