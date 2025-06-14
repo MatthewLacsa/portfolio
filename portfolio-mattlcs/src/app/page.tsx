@@ -11,7 +11,7 @@ export default function Home() {
       </div>
       
        <motion.h1
-      className="text-[4rem] font-bold text-blue-300 text-center"
+      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
