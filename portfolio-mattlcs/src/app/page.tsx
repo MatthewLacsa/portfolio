@@ -15,7 +15,7 @@ export default function Home() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-     <div className="flex gap-2 text-2xl">
+     <div className="flex gap-6 text-2xl">
                 <a 
                 className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9]"
                 href="/aboutme">About Me</a>
@@ -49,7 +49,7 @@ export default function Home() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <div className="text-xs sm:text-sm md:text-base lg:text-lg">
+      <div className="text-xl sm:text-xl md:text-xl lg:text-2xl">
          <TypeAnimation
             sequence={[
             'CS @ Dalhousie University',
@@ -63,7 +63,7 @@ export default function Home() {
             ]}
             wrapper="span"
             speed={10}
-            style={{ fontSize: '2em', display: 'inline-block' }}
+            style={{ display: 'inline-block' }}
             repeat={Infinity}
           />
       </div>
