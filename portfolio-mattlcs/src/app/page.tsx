@@ -6,24 +6,28 @@ export default function Home() {
     
     <div className="h-screen flex flex-col items-center justify-center">
       <motion.h1
-      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
+      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8AB0B5] to-[#57C785] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 2,
-        delay: 0.5,
+        delay: 1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
      <div className="flex gap-2 text-2xl">
-                <a href="/aboutme">About Me</a>
-                <a href="/projects">Projects</a>
+                <a 
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9]"
+                href="/aboutme">About Me</a>
+                <a 
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9]"
+                href="/projects">Projects</a>
 
       </div>
     </motion.h1>
       
-       <motion.h1
-      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
+    <motion.h1
+      className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -34,13 +38,14 @@ export default function Home() {
     >
      Matthew Lacsa
     </motion.h1>
+
      <motion.h1
-      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
+      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8AB0B5] to-[#57C785] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 2,
-        delay: 0.5,
+        delay: 1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
