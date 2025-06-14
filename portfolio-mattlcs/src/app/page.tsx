@@ -3,12 +3,24 @@ import { TypeAnimation } from 'react-type-animation';
 import * as motion from "motion/react-client"
 export default function Home() {
   return (
+    
     <div className="h-screen flex flex-col items-center justify-center">
-      <div className="flex gap-2 text-2xl">
+      <motion.h1
+      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 2,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
+     <div className="flex gap-2 text-2xl">
                 <a href="/aboutme">About Me</a>
                 <a href="/projects">Projects</a>
 
       </div>
+    </motion.h1>
       
        <motion.h1
       className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
@@ -22,7 +34,16 @@ export default function Home() {
     >
      Matthew Lacsa
     </motion.h1>
-
+     <motion.h1
+      className="text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 2,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <div className="text-xs sm:text-sm md:text-base lg:text-lg">
          <TypeAnimation
             sequence={[
@@ -41,6 +62,8 @@ export default function Home() {
             repeat={Infinity}
           />
       </div>
+    </motion.h1>
+     
     </div>
   );
 }
