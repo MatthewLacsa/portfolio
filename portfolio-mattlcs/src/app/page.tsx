@@ -6,7 +6,7 @@ export default function Home() {
     
     <div className="h-screen flex flex-col items-center justify-center">
       <motion.h1
-      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8AB0B5] to-[#57C785] text-center"
+      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -40,7 +40,7 @@ export default function Home() {
     </motion.h1>
 
      <motion.h1
-      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8AB0B5] to-[#57C785] text-center"
+      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
