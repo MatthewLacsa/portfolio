@@ -1,6 +1,6 @@
 "use client"
-import { TypeAnimation } from 'react-type-animation';
 import * as motion from "motion/react-client"
+import IconButton from "./components/IconButton";
 export default function Home() {
   return (
     
@@ -16,11 +16,12 @@ export default function Home() {
       }}
     >
      <div className="flex gap-6 text-2xl">
+
                 <a 
-                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9]"
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9] underline decoration-white underline-offset-4 hover:scale-110"
                 href="/aboutme">About Me</a>
                 <a 
-                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9]"
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ACD5E3] hover:to-[#9AE3B9] underline decoration-white underline-offset-4 hover:scale-110"
                 href="/projects">Projects</a>
 
       </div>
@@ -49,23 +50,10 @@ export default function Home() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <div className="text-xl sm:text-xl md:text-xl lg:text-2xl">
-         <TypeAnimation
-            sequence={[
-            'CS @ Dalhousie University',
-            1000, 
-            'Aspiring Software Developer',
-            1000,
-            'Data Entry Clerk @ Halina',
-            1000,
-            'Code Reviewer @ Outlier',
-            1000,
-            ]}
-            wrapper="span"
-            speed={10}
-            style={{ display: 'inline-block' }}
-            repeat={Infinity}
-          />
+      <div className="text-xl sm:text-xl md:text-xl lg:text-2xl flex gap-3 mt-3">
+        <IconButton imgSrc="/linkedin.png" altImg="linkedin" linkToContact="https://www.linkedin.com/in/matthewlacsa/"/>
+        <IconButton imgSrc="/github.png" altImg="github" linkToContact="https://github.com/MatthewLacsa"/>
+        <IconButton imgSrc="/gmail.png" altImg="gmail" linkToContact="matthewlacsa@gmail.com"/>
       </div>
     </motion.h1>
      
