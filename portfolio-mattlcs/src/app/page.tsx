@@ -12,7 +12,7 @@ export default function Home() {
       <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 0.40, scale: 1 }}
       transition={{
         duration: 2,
         delay: 1,
@@ -34,7 +34,7 @@ export default function Home() {
     <motion.h1
       className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600 text-center"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 0.40, scale: 1 }}
       transition={{
         duration: 2,
         delay: 0.5,
@@ -47,7 +47,7 @@ export default function Home() {
      <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: .40, scale: 1 }}
       transition={{
         duration: 2,
         delay: 1,
