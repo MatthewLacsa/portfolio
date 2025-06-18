@@ -17,3 +17,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-wave-slow {
+  animation: wave 16s ease-in-out infinite;
+}
+
+.animate-wave-medium {
+  animation: wave 10s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave 6s ease-in-out infinite;
+}
