@@ -1,12 +1,14 @@
 "use client"
 import * as motion from "motion/react-client"
 import IconButton from "./components/IconButton";
-import Sky from "./components/Sky"
 export default function Home() {
   return (
     
-    <div className="h-screen flex flex-col items-center justify-center bg-neutral-900">
-      <Sky numberOfStars={100}/>
+    <div className="relative h-screen flex flex-col items-center justify-center bg-neutral-900">
+
+
+
+
       <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
