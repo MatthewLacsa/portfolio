@@ -60,7 +60,43 @@ export default function Home() {
         <IconButton imgSrc="/gmail.png" altImg="gmail" linkToContact="matthewlacsa@gmail.com"/>
       </div>
     </motion.h1>
-     
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0 text-[0]">
+          {/* Back wave */}
+          <svg
+            className="relative block w-[200%] h-32 animate-wave-slow opacity-30"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 C150,100 350,0 600,60 C850,120 1050,20 1200,60 L1200,120 L0,120 Z"
+              fill="white"
+            />
+          </svg>
+
+          {/* Middle wave */}
+          <svg
+            className="relative -mt-[2.75rem] block w-[200%] h-32 animate-wave-medium opacity-60"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 C200,80 400,0 700,60 C900,110 1100,30 1200,60 L1200,120 L0,120 Z"
+              fill="white"
+            />
+          </svg>
+
+          {/* Front wave */}
+          <svg
+            className="relative -mt-[2.75rem] block w-[200%] h-32 animate-wave-fast opacity-80"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 C120,90 320,0 620,60 C900,100 1120,40 1200,60 L1200,120 L0,120 Z"
+              fill="white"
+            />
+          </svg>
+        </div>
     </div>
   );
 }
