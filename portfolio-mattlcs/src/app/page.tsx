@@ -62,39 +62,39 @@ export default function Home() {
     </motion.h1>
 
 
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden text-[0] -z-10">
-          {/* Back Wave */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden text-[0]">
+          {/* Back Wave*/}
           <svg
-            className="relative block w-[200%] h-[20rem] animate-wave-slow opacity-30"
+            className="relative block w-[200%] h-[13rem] animate-wave-slow opacity-30"
             viewBox="0 0 1200 300"
             preserveAspectRatio="none"
           >
             <path
-              d="M0,0 C150,200 350,0 600,180 C850,300 1050,40 1200,240 L1200,300 L0,300 Z"
+              d="M0,150 C200,50 400,250 600,150 C800,50 1000,250 1200,150 L1200,300 L0,300 Z"
               fill="white"
             />
           </svg>
 
-          {/* Middle Wave */}
+          {/* Middle Wave*/}
           <svg
-            className="relative -mt-[16rem] block w-[200%] h-[20rem] animate-wave-medium opacity-60"
+            className="relative block -mt-[15rem] w-[200%] h-[20rem] animate-wave-medium opacity-60"
             viewBox="0 0 1200 300"
             preserveAspectRatio="none"
           >
             <path
-              d="M0,0 C200,160 400,0 700,180 C900,270 1100,30 1200,220 L1200,300 L0,300 Z"
+              d="M0,120 C200,30 400,270 600,180 C800,90 1000,260 1200,120 L1200,300 L0,300 Z"
               fill="white"
             />
           </svg>
 
           {/* Front Wave */}
           <svg
-            className="relative -mt-[16rem] block w-[200%] h-[20rem] animate-wave-fast opacity-80"
+            className="relative -mt-[15rem] block w-[200%] h-[20rem] animate-wave-fast opacity-80"
             viewBox="0 0 1200 300"
             preserveAspectRatio="none"
           >
             <path
-              d="M0,0 C120,190 320,0 620,180 C900,260 1120,40 1200,210 L1200,300 L0,300 Z"
+              d="M0,80 C200,0 400,300 600,200 C800,100 1000,280 1200,80 L1200,300 L0,300 Z"
               fill="white"
             />
           </svg>

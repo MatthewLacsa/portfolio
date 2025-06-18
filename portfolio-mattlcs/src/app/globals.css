@@ -31,13 +31,13 @@ body {
 }
 
 .animate-wave-slow {
-  animation: wave 16s ease-in-out infinite;
-}
-
-.animate-wave-medium {
   animation: wave 10s ease-in-out infinite;
 }
 
-.animate-wave-fast {
+.animate-wave-medium {
   animation: wave 6s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave 4s ease-in-out infinite;
 }
