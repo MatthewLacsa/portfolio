@@ -5,10 +5,7 @@ export default function Home() {
   return (
     
     <div className="relative h-screen flex flex-col items-center justify-center bg-neutral-900">
-
-
-
-
+      {/* Pressable links projects and about me*/}
       <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
@@ -30,7 +27,7 @@ export default function Home() {
 
       </div>
     </motion.h1>
-      
+    {/* My animated name, planning to make this interactive hmm */}
     <motion.h1
       className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
@@ -53,7 +50,7 @@ export default function Home() {
         delay: 1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-    >
+    > {/* Links to reach out/check me out ;) */}
       <div className="text-xl sm:text-xl md:text-xl lg:text-2xl flex gap-3 mt-3">
         <IconButton imgSrc="/linkedin.png" altImg="linkedin" linkToContact="https://www.linkedin.com/in/matthewlacsa/"/>
         <IconButton imgSrc="/github.png" altImg="github" linkToContact="https://github.com/MatthewLacsa"/>
@@ -63,7 +60,7 @@ export default function Home() {
 
 
         <div className="absolute bottom-0 left-0 w-full overflow-hidden text-[0]">
-          {/* Back Wave*/}
+          {/* This is the wave at the very back*/}
           <svg
             className="relative block w-[200%] h-[13rem] animate-wave-slow opacity-30"
             viewBox="0 0 1200 300"
@@ -75,7 +72,7 @@ export default function Home() {
             />
           </svg>
 
-          {/* Middle Wave*/}
+          {/* Wave in the middle */}
           <svg
             className="relative block -mt-[15rem] w-[200%] h-[20rem] animate-wave-medium opacity-60"
             viewBox="0 0 1200 300"
@@ -87,7 +84,7 @@ export default function Home() {
             />
           </svg>
 
-          {/* Front Wave */}
+          {/* Wave with most opacity/front */}
           <svg
             className="relative -mt-[15rem] block w-[200%] h-[20rem] animate-wave-fast opacity-80"
             viewBox="0 0 1200 300"
