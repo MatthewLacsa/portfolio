@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     
-    <div className="relative h-screen flex flex-col items-center justify-center bg-neutral-900">
+    <div className="relative h-screen flex flex-col items-center justify-center bg-neutral-900 overflow-x-hidden">
       {/* Pressable links projects and about me*/}
       <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center"
@@ -17,7 +17,7 @@ export default function Home() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-     <div className="flex gap-6 text-2xl">
+     <div className="flex flex-wrap justify-center gap-6 text-2xl">
 
                 <Link
                 className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110"
@@ -30,7 +30,7 @@ export default function Home() {
     </motion.h1>
     {/* My animated name, planning to make this interactive hmm */}
     <motion.h1
-      className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center"
+      className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center px-4"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 0.40, scale: 1 }}
       transition={{
@@ -60,7 +60,7 @@ export default function Home() {
     </motion.h1>
 
 
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden text-[0]">
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden text-[0]">
           {/* This is the wave at the very back*/}
           <svg
             className="relative block w-[200%] h-[13rem] animate-wave-slow opacity-30"

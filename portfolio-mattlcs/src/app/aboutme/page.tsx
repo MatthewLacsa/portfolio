@@ -3,11 +3,12 @@ import { useState } from 'react';
 import * as motion from "motion/react-client"
 import Image from "next/image";
 import Link from 'next/link';
+import IconButton from '../components/IconButton';
 const AboutMe: React.FC = () => {
     const [expandedStack, setExpandedStack] = useState<number | null>(null);
 
     return (
-        <div className="relative min-h-screen w-screen flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
+        <div className="relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -18,19 +19,18 @@ const AboutMe: React.FC = () => {
                     }}
                     className="flex flex-col gap-4 mt-10 lg:w-1/2 w-full">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">Hey, My name is  
-                    <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa</span>! <br/> 
-                    <div className="inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#9b9bb8] float-right hover:scale-110">
+                    <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa! </span> 
+                    <div className="hidden sm:inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#9b9bb8] float-right hover:scale-110">
                         <Link href="/">
                             <Image
                                 src="/me.jpeg"
                                 alt="Profile"
-                                width={120}
-                                height={120}
+                                width={100}
+                                height={100}
                                 className="rounded-full object-cover block "
                             />
                         </Link>
                     </div>
-
                        I study <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Computer Science at Dalhousie University</span>.
                        I am a <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
                        <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Software Developer</span> in the near future. 
@@ -41,9 +41,16 @@ const AboutMe: React.FC = () => {
                        that applying commands in my games, the occasional use of Powershell
                        and making simple HTML websites would transfer over in such a field. 
                     </div>
+                    
+                    <div className="text-xl sm:text-xl md:text-xl lg:text-2xl flex flex-wrap gap-3 mb-4">
+                        <IconButton imgSrc="/linkedin.png" altImg="linkedin" linkToContact="https://www.linkedin.com/in/matthewlacsa/"/>
+                        <IconButton imgSrc="/github.png" altImg="github" linkToContact="https://github.com/MatthewLacsa"/>
+                        <IconButton imgSrc="/gmail.png" altImg="gmail" linkToContact="mailto:matthewlacsa@gmail.com"/>
+                        <Link href="/" className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5]"><span className='text-gray-600'>Back to Home</span></Link>
+                    </div>
                 </motion.div>
 
-
+            <div className="flex flex-col sm:flex-row sm:gap-10 max-w-full">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -52,10 +59,10 @@ const AboutMe: React.FC = () => {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
-                    className={`relative h-28 mt-10 z-5`}
+                    className={`relative mt-10 z-5`}
                     onClick={() => setExpandedStack(expandedStack === 0 ? null : 0)}
                 >
-                    <div className={`transition-all duration-500 ${expandedStack === 0 ? 'relative space-y-2 size-50' : 'stack size-50'} hover:scale-110 w-100`}>
+                    <div className={`transition-all duration-500 space-y-2`}>
                         <div className="border-base-content card bg-base-100 border text-center h-48 ">
                             <div className="card-body">A</div>
                         </div>
@@ -76,12 +83,13 @@ const AboutMe: React.FC = () => {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
-                    className={`relative h-28 mt-10 z-5` }
+                    className={`relative mt-10 z-5` }
                     onClick={() => setExpandedStack(expandedStack === 1 ? null : 1)}
                 >
-                    <div className={`transition-all duration-500 ${expandedStack === 1 ? 'relative space-y-2 size-50 ' : 'stack size-50 hover:scale-110'} w-100 `}>
+
+                    <div className={`transition-all duration-500 space-y-2`}>
                         <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">A</div>
+                            <div className="card-body">MIBOMBACLAT THING</div>
                         </div>
                         <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">B</div>
@@ -95,8 +103,8 @@ const AboutMe: React.FC = () => {
                     </div>
                 </motion.div>
 
-
-             <div className="absolute bottom-0 left-0 w-full overflow-hidden -z-0 text-[0]">
+            </div>
+             <div className="hidden sm:block absolute bottom-0 left-0 right-0 overflow-hidden -z-0 text-[0]">
                 {/* This is the wave at the very back*/}
                 <svg
                     className="relative block w-[200%] h-[13rem] animate-wave-slow opacity-30"
