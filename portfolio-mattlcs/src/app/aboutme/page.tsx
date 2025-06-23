@@ -2,11 +2,12 @@
 import { useState } from 'react';
 import * as motion from "motion/react-client"
 import Image from "next/image";
+import Link from 'next/link';
 const AboutMe: React.FC = () => {
     const [expandedStack, setExpandedStack] = useState<number | null>(null);
 
     return (
-        <div className="relative h-screen w-screen flex justify-center gap-4">
+        <div className="relative min-h-screen w-screen flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -15,17 +16,31 @@ const AboutMe: React.FC = () => {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
-                    className="flex flex-row gap-4 mt-10 w-150">
-                    <p className="text-3xl font-bold">Hey, My name is <span>Matthew Lacsa</span>! <Image src="/me.jpeg" alt="Profile" width="120" height="120" 
-                    className="rounded-full object-cover float-right"/>
-                       I am a Computer Science student @ <span>Dalhousie University</span>. 
-                       I am currently on my 3rd year and I am an aspiring <span>Software Developer</span>. 
+                    className="flex flex-col gap-4 mt-10 lg:w-1/2 w-full">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">Hey, My name is  
+                    <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa</span>! <br/> 
+                    <div className="inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#9b9bb8] float-right hover:scale-110">
+                        <Link href="/">
+                            <Image
+                                src="/me.jpeg"
+                                alt="Profile"
+                                width={120}
+                                height={120}
+                                className="rounded-full object-cover block "
+                            />
+                        </Link>
+                    </div>
+
+                       I study <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Computer Science at Dalhousie University</span>.
+                       I am a <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
+                       <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Software Developer</span> in the near future. 
+                    </div>
+                    <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">
                        My decision to choose CS comes from my early exposure to tech as a kid (not the best idea I know),
                        at first I barely had an idea what I was putting myself into, only then did I realize 
                        that applying commands in my games, the occasional use of Powershell
                        and making simple HTML websites would transfer over in such a field. 
-                    </p>
-
+                    </div>
                 </motion.div>
 
 
@@ -41,13 +56,13 @@ const AboutMe: React.FC = () => {
                     onClick={() => setExpandedStack(expandedStack === 0 ? null : 0)}
                 >
                     <div className={`transition-all duration-500 ${expandedStack === 0 ? 'relative space-y-2 size-50' : 'stack size-50'} hover:scale-110 w-100`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                        <div className="border-base-content card bg-base-100 border text-center h-48 ">
                             <div className="card-body">A</div>
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                        <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">B</div>
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                        <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">C</div>
                         </div>
                     </div>
@@ -64,14 +79,17 @@ const AboutMe: React.FC = () => {
                     className={`relative h-28 mt-10 z-5` }
                     onClick={() => setExpandedStack(expandedStack === 1 ? null : 1)}
                 >
-                    <div className={`transition-all duration-500 ${expandedStack === 1 ? 'relative space-y-2 size-50' : 'stack size-50'} hover:scale-110 w-100`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                    <div className={`transition-all duration-500 ${expandedStack === 1 ? 'relative space-y-2 size-50 ' : 'stack size-50 hover:scale-110'} w-100 `}>
+                        <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">A</div>
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                        <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">B</div>
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-50">
+                        <div className="border-base-content card bg-base-100 border text-center h-48">
+                            <div className="card-body">C</div>
+                        </div>
+                         <div className="border-base-content card bg-base-100 border text-center h-48">
                             <div className="card-body">C</div>
                         </div>
                     </div>

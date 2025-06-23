@@ -1,6 +1,7 @@
 "use client"
 import * as motion from "motion/react-client"
 import IconButton from "./components/IconButton";
+import Link from "next/link";
 export default function Home() {
   return (
     
@@ -18,12 +19,12 @@ export default function Home() {
     >
      <div className="flex gap-6 text-2xl">
 
-                <a 
+                <Link
                 className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110"
-                href="/aboutme">About Me</a>
-                <a 
+                href="/aboutme">About Me</Link>
+                <Link
                 className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110"
-                href="/projects">Projects</a>
+                href="/projects">Projects</Link>
 
       </div>
     </motion.h1>
