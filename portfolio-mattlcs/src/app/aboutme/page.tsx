@@ -96,6 +96,7 @@ const AboutMe: React.FC = () => {
                     <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
                         <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
                             <div className="card-title">Art</div>
+                            <div className="hover:scale-110"><Image src="/jfj.png" alt="halina" width={140} height={100}/></div>
                             <div>I am an artist when I have spare time, from drawing famous characters when I was a kid to doodles and paintings</div>
                             
                         </div>
