@@ -1,11 +1,9 @@
 "use client"
-import { useState } from 'react';
 import * as motion from "motion/react-client"
 import Image from "next/image";
 import Link from 'next/link';
 import IconButton from '../components/IconButton';
 const AboutMe: React.FC = () => {
-    const [expandedStack, setExpandedStack] = useState<number | null>(null);
 
     return (
         <div className="relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
@@ -46,7 +44,7 @@ const AboutMe: React.FC = () => {
                         <IconButton imgSrc="/linkedin.png" altImg="linkedin" linkToContact="https://www.linkedin.com/in/matthewlacsa/"/>
                         <IconButton imgSrc="/github.png" altImg="github" linkToContact="https://github.com/MatthewLacsa"/>
                         <IconButton imgSrc="/gmail.png" altImg="gmail" linkToContact="mailto:matthewlacsa@gmail.com"/>
-                        <Link href="/" className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5]"><span className='text-gray-600'>Back to Home</span></Link>
+                        <Link href="/" className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110"><span className='text-gray-600'>Back to Home</span></Link>
                     </div>
                 </motion.div>
 
@@ -60,17 +58,26 @@ const AboutMe: React.FC = () => {
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                     className={`relative mt-10 z-5`}
-                    onClick={() => setExpandedStack(expandedStack === 0 ? null : 0)}
                 >
-                    <div className={`transition-all duration-500 space-y-2`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 ">
-                            <div className="card-body">A</div>
+                    <div className="text-center">Experience</div>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
+                        <div className="border-base-content card bg-base-100 border text-center h-48 items-center"> 
+                            <div className="card-title">Code Reviewer @ Outlier</div>
+                            <div className="hover:scale-110"><Image src="/outlier.png" alt="outlier" width={60} height={100}/></div>
+                            <div className="">I work in Outlier as a Code Evaluator although it varies from time to time. I check if the model shows vulnerabilities or errors and I generate prompts that guarantee model failure.</div>
+
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">B</div>
+                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
+                            <div className="card-title">Data Entry Clerk @ Halina Cafe n Bar</div>
+                            <div className="hover:scale-110"><Image src="/halina.png" alt="halina" width={80} height={100}/></div>
+                            <div>I manage all the financial data entry, including expenses, and I do the inputs, updates, and maintenance ensuring that the financial records are accurate.</div>
+                            
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">C</div>
+                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
+                            <div className="card-title">Construction @ JFJ Construction Ltd.</div>
+                            <div className="hover:scale-110"><Image src="/jfj.png" alt="halina" width={140} height={100}/></div>
+                            <div>Bob the Builder type job for two years. For two summers, I helped with the heavy lifting, assistance with building decks, as well as apartment maintenance.</div>
+                            
                         </div>
                     </div>
                 </motion.div>
@@ -84,21 +91,18 @@ const AboutMe: React.FC = () => {
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                     className={`relative mt-10 z-5` }
-                    onClick={() => setExpandedStack(expandedStack === 1 ? null : 1)}
                 >
-
-                    <div className={`transition-all duration-500 space-y-2`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">MIBOMBACLAT THING</div>
+                    <div className="text-center">Hobbies</div>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
+                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
+                            <div className="card-title">Art</div>
+                            <div>I am an artist when I have spare time, from drawing famous characters when I was a kid to doodles and paintings</div>
+                            
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">B</div>
-                        </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">C</div>
-                        </div>
-                         <div className="border-base-content card bg-base-100 border text-center h-48">
-                            <div className="card-body">C</div>
+                         <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
+                            <div className="card-title">Photography</div>
+                            <div>I do photography when I go on trips, capturing the moment has always been such a great feeling</div>
+                            
                         </div>
                     </div>
                 </motion.div>
