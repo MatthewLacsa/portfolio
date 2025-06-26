@@ -8,9 +8,9 @@ export default function Home() {
     <div className="relative h-screen flex flex-col items-center justify-center bg-neutral-900 overflow-x-hidden">
       {/* Pressable links projects and about me*/}
       <motion.h1
-      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center"
+      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#69698f] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 0.40, scale: 1 }}
+      animate={{ opacity: 0.70, scale: 1 }}
       transition={{
         duration: 2,
         delay: 1,
@@ -20,10 +20,10 @@ export default function Home() {
      <div className="flex flex-wrap justify-center gap-6 text-2xl">
 
                 <Link
-                className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110"
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110 hover:cursor-pointer"
                 href="/aboutme">About Me</Link>
                 <Link
-                className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110"
+                className="bg-clip-text  bg-gradient-to-r hover:from-[#ecfcff] hover:to-[#d9d9f3] underline decoration-white underline-offset-4 hover:scale-110 hover:cursor-pointer"
                 href="/projects">Projects</Link>
 
       </div>
@@ -32,7 +32,7 @@ export default function Home() {
     <motion.h1
       className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ecfcff] to-[#6d6d9c] text-center px-4"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 0.40, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 2,
         delay: 0.5,
@@ -45,7 +45,7 @@ export default function Home() {
      <motion.h1
       className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
       initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: .40, scale: 1 }}
+      animate={{ opacity: .70, scale: 1 }}
       transition={{
         duration: 2,
         delay: 1,

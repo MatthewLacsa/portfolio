@@ -33,7 +33,7 @@ const AboutMe: React.FC = () => {
                        I am a <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
                        <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Software Developer</span> in the near future. 
                     </div>
-                    <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">
+                    <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">
                        My decision to choose CS comes from my early exposure to tech as a kid (not the best idea I know),
                        at first I barely had an idea what I was putting myself into, only then did I realize 
                        that applying commands in my games, the occasional use of Powershell
@@ -63,19 +63,19 @@ const AboutMe: React.FC = () => {
                     <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
                         <div className="border-base-content card bg-base-100 border text-center h-48 items-center"> 
                             <div className="card-title">Code Reviewer @ Outlier</div>
-                            <div className="hover:scale-110"><Image src="/outlier.png" alt="outlier" width={60} height={100}/></div>
+                            <div className="hover:scale-110"><Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer"><Image src="/outlier.png" alt="outlier" width={60} height={100}/></Link></div>
                             <div className="">I work in Outlier as a Code Evaluator although it varies from time to time. I check if the model shows vulnerabilities or errors and I generate prompts that guarantee model failure.</div>
 
                         </div>
                         <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
                             <div className="card-title">Data Entry Clerk @ Halina Cafe n Bar</div>
-                            <div className="hover:scale-110"><Image src="/halina.png" alt="halina" width={80} height={100}/></div>
+                            <div className="hover:scale-110"><Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer"><Image src="/halina.png" alt="halina" width={80} height={100}/></Link></div>
                             <div>I manage all the financial data entry, including expenses, and I do the inputs, updates, and maintenance ensuring that the financial records are accurate.</div>
                             
                         </div>
                         <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
                             <div className="card-title">Construction @ JFJ Construction Ltd.</div>
-                            <div className="hover:scale-110"><Image src="/jfj.png" alt="halina" width={140} height={100}/></div>
+                            <div className="hover:scale-110"><Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"><Image src="/jfj.png" alt="halina" width={140} height={100}/></Link></div>
                             <div>Bob the Builder type job for two years. For two summers, I helped with the heavy lifting, assistance with building decks, as well as apartment maintenance.</div>
                             
                         </div>
@@ -103,6 +103,11 @@ const AboutMe: React.FC = () => {
                          <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
                             <div className="card-title">Photography</div>
                             <div>I do photography when I go on trips, capturing the moment has always been such a great feeling</div>
+                            
+                        </div>
+                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
+                            <div className="card-title">Guitar</div>
+                            <div>I was learning how to play a guitar years ago, but I set it aside for other priorities. I have decided to pick it up again and I'm in the process of relearning it.</div>
                             
                         </div>
                     </div>
