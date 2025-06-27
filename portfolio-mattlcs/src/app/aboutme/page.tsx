@@ -3,10 +3,70 @@ import * as motion from "motion/react-client"
 import Image from "next/image";
 import Link from 'next/link';
 import IconButton from '../components/IconButton';
+import { useState } from "react";
 const AboutMe: React.FC = () => {
+    const [showGallery, setShowGallery] = useState(false);
+    const [galleryType, setGalleryType] = useState<'art' | 'photography'>('art');
+
+    const artImages = [
+        "/art/eye.jpeg",
+        "/art/opm.jpeg",
+        "/art/waterfront.jpeg",
+        "/art/doodle.jpeg",
+    ];
+
+    const photographyImages = [
+        "/photography/cafe.jpeg",
+        "/photography/building.jpeg",
+        "/photography/building2.jpeg",
+        "/photography/montreal.jpeg",
+        "/photography/niagara.jpeg",
+        "/photography/toronto.jpeg",
+
+    ];
+
+    const openGallery = (type: 'art' | 'photography') => {
+        setGalleryType(type);
+        setShowGallery(true);
+    };
+
+    const closeGallery = () => {
+        setShowGallery(false);
+    };
 
     return (
         <div className="relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
+                    {/* Collection of Photos/Artworks */}
+                    {showGallery && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-80 p-4">
+                        <div className="relative bg-gradient-to-r from-[#657072] to-[#6a6a7a] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6">
+                            <button 
+                                onClick={closeGallery}
+                                className="absolute top-4 right-4 text-2xl font-bold text-gray-700 hover:text-black"
+                            >
+                                ×
+                            </button>
+                            
+                            <h2 className="text-3xl font-bold mb-6 text-center">
+                                {galleryType === 'art' ? 'My Artworks' : 'My Photography'}
+                            </h2>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {(galleryType === 'art' ? artImages : photographyImages).map((img, index) => (
+                                    <div key={index} className="relative aspect-square">
+                                        <Image
+                                            src={img}
+                                            alt={galleryType === 'art' ? 'Artwork' : 'Photography'}
+                                            fill
+                                            className="object-cover rounded-lg"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {/* Introduction and Name */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -21,7 +81,7 @@ const AboutMe: React.FC = () => {
                     <div className="hidden sm:inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#9b9bb8] float-right hover:scale-110">
                         <Link href="/">
                             <Image
-                                src="/me.jpeg"
+                                src="/experiences/me.jpeg"
                                 alt="Profile"
                                 width={100}
                                 height={100}
@@ -47,8 +107,8 @@ const AboutMe: React.FC = () => {
                         <Link href="/" className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110"><span className='text-gray-600'>Back to Home</span></Link>
                     </div>
                 </motion.div>
-
-            <div className="flex flex-col sm:flex-row sm:gap-10 max-w-full">
+            {/* Hobbies/Experiences */}
+            <div className="flex flex-col sm:flex-row sm:gap-6 max-w-full">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -59,24 +119,24 @@ const AboutMe: React.FC = () => {
                     }}
                     className={`relative mt-10 z-5`}
                 >
-                    <div className="text-center">Experience</div>
-                    <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 items-center"> 
-                            <div className="card-title">Code Reviewer @ Outlier</div>
-                            <div className="hover:scale-110"><Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer"><Image src="/outlier.png" alt="outlier" width={60} height={100}/></Link></div>
-                            <div className="">I work in Outlier as a Code Evaluator although it varies from time to time. I check if the model shows vulnerabilities or errors and I generate prompts that guarantee model failure.</div>
+                    <div className="text-center text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Experience</div>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-130`}>
+                        <div className="border-base-content card bg-base-100/70 text-center h-auto items-center gap-4"> 
+                            <div className="card-title text-2xl">Code Reviewer @ Outlier</div>
+                            <div className="hover:scale-110"><Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/outlier.png" alt="outlier" width={60} height={100}/></Link></div>
+                            <div className="text-xl">I work in Outlier as a Code Evaluator although it varies from time to time. I check if the AI model shows vulnerabilities or errors and figure out what went wrong</div>
 
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
-                            <div className="card-title">Data Entry Clerk @ Halina Cafe n Bar</div>
-                            <div className="hover:scale-110"><Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer"><Image src="/halina.png" alt="halina" width={80} height={100}/></Link></div>
-                            <div>I manage all the financial data entry, including expenses, and I do the inputs, updates, and maintenance ensuring that the financial records are accurate.</div>
+                        <div className="border-base-content card bg-base-100/70 text-center flex-col items-center gap-4">
+                            <div className="card-title text-2xl">Data Entry Clerk @ Halina Cafe n Bar</div>
+                            <div className="hover:scale-110"><Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/halina.png" alt="halina" width={80} height={100}/></Link></div>
+                            <div className="text-xl">I manage all the financial data entry, including expenses, and I do the inputs, updates, and maintenance ensuring that the financial records are accurate.</div>
                             
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
-                            <div className="card-title">Construction @ JFJ Construction Ltd.</div>
-                            <div className="hover:scale-110"><Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"><Image src="/jfj.png" alt="halina" width={140} height={100}/></Link></div>
-                            <div>Bob the Builder type job for two years. For two summers, I helped with the heavy lifting, assistance with building decks, as well as apartment maintenance.</div>
+                        <div className="border-base-content card bg-base-100/70 text-center flex-col items-center gap-4">
+                            <div className="card-title text-2xl">Construction @ JFJ Construction Ltd.</div>
+                            <div className="hover:scale-110"><Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/jfj.png" alt="jfj" width={140} height={100}/></Link></div>
+                            <div className="text-xl">Bob the Builder type job for two years. For two summers, I helped with the heavy lifting, assistance with building decks, as well as apartment maintenance.</div>
                             
                         </div>
                     </div>
@@ -92,22 +152,27 @@ const AboutMe: React.FC = () => {
                     }}
                     className={`relative mt-10 z-5` }
                 >
-                    <div className="text-center">Hobbies</div>
-                    <div className={`transition-all duration-500 space-y-2 sm:w-100`}>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
-                            <div className="card-title">Art</div>
-                            <div className="hover:scale-110"><Image src="/jfj.png" alt="halina" width={140} height={100}/></div>
-                            <div>I am an artist when I have spare time, from drawing famous characters when I was a kid to doodles and paintings</div>
+                    <div className="text-center text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Hobbies</div>
+                    <div className={`transition-all duration-500 space-y-2 w-auto`}>
+                        <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center">
+                            <div className="card-title text-2xl">Art</div>
+                            <div className="gap-12 flex flex-row"><Image src="/art/eye.jpeg" alt="eye painting" width={220} height={100} className="border-4 border-black"/> 
+                                    <button onClick={() => openGallery("art")} className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110 self-center shadow-lg"><span className='text-gray-600'>More of my works</span>
+                                        </button>
+                                    </div>
+                            <div className="text-xl">I am an artist when I have spare time, from drawing famous characters when I was a kid to doodles and paintings</div>
                             
                         </div>
-                         <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
-                            <div className="card-title">Photography</div>
-                            <div>I do photography when I go on trips, capturing the moment has always been such a great feeling</div>
+                         <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center gap-4">
+                            <div className="card-title text-2xl">Photography</div>
+                             <div className="gap-12 flex flex-row "><Image src="/photography/cafe.jpeg"  alt="cafe" width={220} height={100} className="border-4 border-black"/> 
+                                    <button onClick={() => openGallery("photography")} className=" self-center btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110 shadow-lg"><span className='text-gray-600'>More photos</span></button></div>
+                            <div className="text-xl">I do photography when I go on trips, capturing the moment has always been a great feeling, and it's perfect for keeping memories.</div>
                             
                         </div>
-                        <div className="border-base-content card bg-base-100 border text-center h-48 flex-col items-center">
-                            <div className="card-title">Guitar</div>
-                            <div>I was learning how to play a guitar years ago, but I set it aside for other priorities. I have decided to pick it up again and I'm in the process of relearning it.</div>
+                        <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center">
+                            <div className="card-title text-2xl">Music</div>
+                            <div className="text-xl">I was learning how to play a guitar years ago, but I set it aside for other priorities. Recently, I have decided to pick it up again and I'm in the process of relearning it.</div>
                             
                         </div>
                     </div>
