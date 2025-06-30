@@ -38,8 +38,16 @@ const AboutMe: React.FC = () => {
         <div className="relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
                     {/* Collection of Photos/Artworks */}
                     {showGallery && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-80 p-4">
-                        <div className="relative bg-gradient-to-r from-[#657072] to-[#6a6a7a] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6">
+                    <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-80 p-4">
+                        <motion.div className="relative bg-gradient-to-r from-[#657072] to-[#6a6a7a] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6" 
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 1,
+                            delay: 0.2,
+                            ease: [0, 0.71, 0.2, 1.01],
+                    }}>
                             <button 
                                 onClick={closeGallery}
                                 className="absolute top-4 right-4 text-2xl font-bold text-gray-700 hover:text-black"
@@ -63,7 +71,7 @@ const AboutMe: React.FC = () => {
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 )}
                 {/* Introduction and Name */}
@@ -78,7 +86,7 @@ const AboutMe: React.FC = () => {
                     className="flex flex-col gap-4 mt-10 lg:w-1/2 w-full">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">Hey, My name is  
                     <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa! </span> 
-                    <div className="hidden sm:inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#9b9bb8] float-right hover:scale-110">
+                    <div className="hidden sm:inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#7b7b88] float-right hover:scale-110">
                         <Link href="/">
                             <Image
                                 src="/experiences/me.jpeg"
@@ -90,7 +98,7 @@ const AboutMe: React.FC = () => {
                         </Link>
                     </div>
                        I study <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Computer Science at Dalhousie University</span>.
-                       I am a <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
+                       I am a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
                        <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Software Developer</span> in the near future. 
                     </div>
                     <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">
@@ -120,23 +128,52 @@ const AboutMe: React.FC = () => {
                     className={`relative mt-10 z-5`}
                 >
                     <div className="text-center text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Experience</div>
-                    <div className={`transition-all duration-500 space-y-2 sm:w-130`}>
-                        <div className="border-base-content card bg-base-100/70 text-center h-auto items-center gap-4"> 
-                            <div className="card-title text-2xl">Code Reviewer @ Outlier</div>
-                            <div className="hover:scale-110"><Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/outlier.png" alt="outlier" width={60} height={100}/></Link></div>
-                            <div className="text-xl">I work in Outlier as a Code Evaluator although it varies from time to time. I check if the AI model shows vulnerabilities or errors and figure out what went wrong</div>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-130 `}>
+                        <div className="border-base-content card bg-base-100/50 text-center h-auto items-center gap-4"> 
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Code Reviewer @ Outlier</div>
+                            <div className="hover:scale-110">
+                                <Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer">
+                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                            <Image
+                                                src="/experiences/outlier.png"
+                                                alt="outlier"
+                                                width={60}
+                                                height={100}
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </Link>
+                                </div>
+                            <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I work in Outlier as a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Code Evaluator</span> although it varies from time to time. I check if the AI model shows vulnerabilities or errors and figure out what went wrong</div>
 
                         </div>
-                        <div className="border-base-content card bg-base-100/70 text-center flex-col items-center gap-4">
-                            <div className="card-title text-2xl">Data Entry Clerk @ Halina Cafe n Bar</div>
-                            <div className="hover:scale-110"><Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/halina.png" alt="halina" width={80} height={100}/></Link></div>
-                            <div className="text-xl">I manage all the financial data entry, including expenses, and I do the inputs, updates, and maintenance ensuring that the financial records are accurate.</div>
+                        <div className="border-base-content card bg-base-100/50 text-center flex-col items-center gap-4">
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Data Entry Clerk @ Halina Cafe n Bar</div>
+                            <div className="hover:scale-110">
+                                
+                                    <Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer">
+                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                            <Image src="/experiences/halina.png" alt="halina" width={70} height={100}/>
+                                        </div>
+                                    </Link>
+                                </div>
+                            <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I manage all the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">financial data entry</span>, 
+                                including expenses, and I do the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">inputs, updates, and maintenance</span> ensuring that the financial records are accurate.</div>
                             
                         </div>
-                        <div className="border-base-content card bg-base-100/70 text-center flex-col items-center gap-4">
-                            <div className="card-title text-2xl">Construction @ JFJ Construction Ltd.</div>
-                            <div className="hover:scale-110"><Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"><Image src="/experiences/jfj.png" alt="jfj" width={140} height={100}/></Link></div>
-                            <div className="text-xl">Bob the Builder type job for two years. For two summers, I helped with the heavy lifting, assistance with building decks, as well as apartment maintenance.</div>
+                        <div className="border-base-content card bg-base-100 text-center flex-col items-center gap-4">
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Construction @ JFJ Construction Ltd.</div>
+                           
+                            <div className="hover:scale-110">
+                                    <Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"> 
+                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                                    <Image src="/experiences/jfj.png" alt="jfj" width={100} height={100}/>            
+                                        </div>
+                                    </Link>
+                                </div>
+                            <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">Bob the Builder type job for two years. For two summers, I helped with the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">heavy lifting</span>, 
+                                assistance with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">building decks</span>, as well as <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">apartment maintenance.</span>
+                            </div>
                             
                         </div>
                     </div>
@@ -154,27 +191,30 @@ const AboutMe: React.FC = () => {
                 >
                     <div className="text-center text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Hobbies</div>
                     <div className={`transition-all duration-500 space-y-2 w-auto`}>
-                        <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center">
-                            <div className="card-title text-2xl">Art</div>
+                        <div className="border-base-content card bg-base-100/50 text-center h-auto flex-col items-center ">
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Music</div>
+                            <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I was learning how to play a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Guitar</span> years ago, 
+                                    but I set it aside for other priorities. Recently, I have decided to pick it up again and I'm in the process of relearning it.
+                            </div>
+                            
+                        </div>
+                        <div className="border-base-content card bg-base-100/50 text-center h-auto flex-col items-center">
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Art</div>
                             <div className="gap-12 flex flex-row"><Image src="/art/eye.jpeg" alt="eye painting" width={220} height={100} className="border-4 border-black"/> 
                                     <button onClick={() => openGallery("art")} className="btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110 self-center shadow-lg"><span className='text-gray-600'>More of my works</span>
                                         </button>
                                     </div>
-                            <div className="text-xl">I am an artist when I have spare time, from drawing famous characters when I was a kid to doodles and paintings</div>
+                            <div className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I enjoy making art when I have spare time, from drawing famous characters when I was a kid to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">doodles and paintings</span>. I usually take inspiration from what I see daily.</div>
                             
                         </div>
-                         <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center gap-4">
-                            <div className="card-title text-2xl">Photography</div>
+                         <div className="border-base-content card bg-base-100 text-center h-auto flex-col items-center gap-4 ">
+                            <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Photography</div>
                              <div className="gap-12 flex flex-row "><Image src="/photography/cafe.jpeg"  alt="cafe" width={220} height={100} className="border-4 border-black"/> 
                                     <button onClick={() => openGallery("photography")} className=" self-center btn rounded-full px-6 py-3 bg-gradient-to-r from-[#c9eef7] to-[#c9c9f5] hover:scale-110 shadow-lg"><span className='text-gray-600'>More photos</span></button></div>
-                            <div className="text-xl">I do photography when I go on trips, capturing the moment has always been a great feeling, and it's perfect for keeping memories.</div>
+                            <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I do photography when I go on <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">trips</span>, capturing the moment has always been a great feeling, and it's perfect for keeping memories.</div>
                             
                         </div>
-                        <div className="border-base-content card bg-base-100/70 text-center h-auto flex-col items-center">
-                            <div className="card-title text-2xl">Music</div>
-                            <div className="text-xl">I was learning how to play a guitar years ago, but I set it aside for other priorities. Recently, I have decided to pick it up again and I'm in the process of relearning it.</div>
-                            
-                        </div>
+                        
                     </div>
                 </motion.div>
 
