@@ -147,7 +147,7 @@ const AboutMe: React.FC = () => {
                                     </Link>
                                 </div>
                             <div className="bg-white/10 rounded-lg p-4 text-left shadow-md"> 
-                                <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I work in Outlier as a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Code Evaluator</span> although it varies from time to time. I check if the AI model shows vulnerabilities or errors and figure out what went wrong
+                                <div className="text-xl font-semibold font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#858594]">I work in Outlier as a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Code Evaluator</span> although it varies from time to time. I check if the AI model shows vulnerabilities or errors and then figure out what went wrong.
                                 </div>
                             </div>
                            
