@@ -83,20 +83,21 @@ const AboutMe: React.FC = () => {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
-                    className="flex flex-col gap-4 lg:w-1/2 w-full mt-5">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">Hey, My name is  
-                    <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa! </span> 
+                    className="flex flex-col gap-2 lg:w-1/2 w-full mt-5">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#92b2b9] to-[#4d4d5e]">Hey, My name is 
                     <div className="hidden sm:inline-block rounded-full p-[10px] bg-gradient-to-r from-[#f7f7f7] to-[#7b7b88] float-right hover:scale-110">
                         <Link href="/">
                             <Image
-                                src="/experiences/me.jpeg"
+                                src="/jallibee.jpeg"
                                 alt="Profile"
-                                width={100}
+                                width={130}
                                 height={100}
                                 className="rounded-full object-cover block "
                             />
                         </Link>
                     </div>
+                    <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Matthew Lacsa! </span> 
+                    
                        I study <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">Computer Science at Dalhousie University</span>.
                        I am a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]">3rd year</span> and I am interested in working as a
                        <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8]"> Software Developer</span> in the near future. 
@@ -116,7 +117,7 @@ const AboutMe: React.FC = () => {
                     </div>
                 </motion.div>
             {/* Hobbies/Experiences */}
-            <div className="flex flex-col sm:flex-row sm:gap-6 max-w-full h-[98vh]">
+            <div className="flex flex-col sm:flex-row sm:gap-6 max-w-full h-auto">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -125,16 +126,16 @@ const AboutMe: React.FC = () => {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
-                    className={`relative z-5`}
+                    className={`relative z-5 mt-5`}
                 >
-                    <div className="text-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold mt-5">Experience</div>
-                    <div className={`transition-all duration-500 space-y-2 sm:w-150 sm:h-[calc(100%-3rem)] sm:overflow-y-auto `}>
+                    <div className="text-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Experience</div>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-150  sm:overflow-y-auto`}>
                         
                         <div className="border-base-content card bg-base-100/50 text-center h-auto items-center gap-5"> 
                             <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Code Reviewer @ Outlier</div>
                             <div className="hover:scale-110">
                                 <Link href="https://outlier.ai/" target="_blank" rel="noopener noreferrer">
-                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                        <div className="p-4 border-4 border-black rounded-full bg-white/30">
                                             <Image
                                                 src="/experiences/outlier.png"
                                                 alt="outlier"
@@ -157,7 +158,7 @@ const AboutMe: React.FC = () => {
                             <div className="hover:scale-110">
                                 
                                     <Link href="https://halinacafeandbar.com/" target="_blank" rel="noopener noreferrer">
-                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                        <div className="p-4 border-4 border-black rounded-full bg-white/40">
                                             <Image src="/experiences/halina.png" alt="halina" width={70} height={100}/>
                                         </div>
                                     </Link>
@@ -175,7 +176,7 @@ const AboutMe: React.FC = () => {
                            
                             <div className="hover:scale-110">
                                     <Link href="https://jfjconstruction.ca/" target="_blank" rel="noopener noreferrer"> 
-                                        <div className="p-4 border-4 border-black rounded-full bg-white">
+                                        <div className="p-4 border-4 border-black rounded-full bg-white/30">
                                                     <Image src="/experiences/jfj.png" alt="jfj" width={100} height={100}/>            
                                         </div>
                                     </Link>
@@ -203,7 +204,7 @@ const AboutMe: React.FC = () => {
                     className={`relative mt-5 z-5` }
                 >
                     <div className="text-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#beced1] to-[#9b9bb8] font-bold">Hobbies</div>
-                    <div className={`transition-all duration-500 space-y-2 sm:w-150 sm:h-[calc(100%-3rem)] sm:overflow-y-auto  `}>
+                    <div className={`transition-all duration-500 space-y-2 sm:w-150 sm:overflow-y-auto`}>
                         <div className="border-base-content card bg-base-100/50 text-center h-auto flex-col items-center ">
                             <div className="card-title text-2xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7e898b] to-[#f6f6fd]">Music</div>
                             <div className="bg-white/10 rounded-lg p-4 text-left shadow-md">
