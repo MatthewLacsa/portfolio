@@ -4,6 +4,7 @@ import Image from "next/image"
 const Projects = () => {
     return (
         <div className="relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-4">
+                    
             <div
                 className="fixed inset-0 z-50 flex  justify-center p-4">
                 <motion.div className="relative bg-gradient-to-r from-[#657072] to-[#6a6a7a] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6" 
@@ -18,7 +19,10 @@ const Projects = () => {
                     <h2 className="text-3xl font-bold mb-6 text-center">
                         My Projects
                     </h2>
-                                        
+
+
+
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="relative aspect-square">
                             <Image src="/plannedit/plannedit-pres.png" alt="plannedit app" fill
