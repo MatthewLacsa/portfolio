@@ -62,7 +62,7 @@ export default function Home() {
                 </motion.h1>
 
                 <motion.h1
-                  className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center"
+                  className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8D6E0] to-[#8C8CFF] text-center z-50"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: .70, scale: 1 }}
                   transition={{
@@ -84,7 +84,7 @@ export default function Home() {
       
 
 
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden text-[0]">
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden -z-0 text-[0]">
           {/* This is the wave at the very back*/}
           <svg
             className="relative block w-[200%] h-[13rem] animate-wave-slow opacity-30"

@@ -109,7 +109,7 @@ const AboutMe: React.FC = () => {
                        and making simple HTML websites would transfer over in such a field. 
                     </div>
                     
-                    <div className="text-xl sm:text-xl md:text-xl lg:text-2xl flex flex-wrap gap-3 mb-4">
+                    <div className="text-xl sm:text-xl md:text-xl lg:text-2xl flex flex-wrap gap-3 mb-4 z-50">
                         <IconButton imgSrc="/linkedin.png" altImg="linkedin" linkToContact="https://www.linkedin.com/in/matthewlacsa/"/>
                         <IconButton imgSrc="/github.png" altImg="github" linkToContact="https://github.com/MatthewLacsa"/>
                         <IconButton imgSrc="/gmail.png" altImg="gmail" linkToContact="mailto:matthewlacsa@gmail.com"/>
